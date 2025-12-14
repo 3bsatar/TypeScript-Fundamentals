@@ -1,0 +1,17 @@
+How to start typescript:
+
+npm install -g typescript
+
+npm install -g ts-node
+
+tsc --init
+
+***************************************
+Compile typescript to javascript (or U can use Code Runner extension):
+
+tsc ./basics.ts
+
+node ./basics.ts
+Output: Hello World!
+
+***************************************
