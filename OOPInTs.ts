@@ -20,7 +20,14 @@ goat.move();
 
 // 2. Inheritance
 // Inheritance allows one class to extend another.
-
+class Monkey extends Animal {
+    constructor(animalName:string){
+        super(animalName);
+    }
+}
+const monkey = new Monkey('Monkey');
+monkey.greeting();
+monkey.move();
 
 // 3. Encapsulation
 // Encapsulation hides internal state and exposes only what's necessary.
