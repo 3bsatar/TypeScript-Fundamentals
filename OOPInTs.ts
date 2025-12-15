@@ -33,16 +33,21 @@ console.log(goat.getAnimalSize);
 // 2. Inheritance
 // Inheritance allows one class to extend another.
 class Monkey extends Animal {
+    public animalAge = 16;
     constructor(animalName: string) {
         super(animalName);
     }
     getAnimalAge() {
         return this.animalAge;
     }
+    move() {
+        console.log(`I can walk and I can jump`)
+    }
 }
 const monkey = new Monkey('Monkey');
 monkey.greeting();
 monkey.move();
+console.log(monkey.animalAge);
 
 // 3. Encapsulation
 // Encapsulation hides internal state and exposes only what's necessary.
