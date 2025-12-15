@@ -1,8 +1,8 @@
 
 // Classes & Object
 // A class is a blueprint for creating objects. An object is an instance of a class.
-class Animal {
-    private animalSize = 'Big';
+abstract class Animal {
+    abstract animalSize: string;
     protected animalAge = 13;
 
     constructor(public animalName: string) {
@@ -21,18 +21,21 @@ class Animal {
     getAnimalSize() {
         return this.animalSize;
     }
+    abstract animalHeight():string;
+
 }
-const goat = new Animal('Goat');
-// goat.animalName = 'Goat';
-goat.greeting();
-goat.move();
-goat.setAnimalSize('Large');
-console.log(goat.getAnimalSize);
+// const goat = new Animal('Goat');
+// // goat.animalName = 'Goat';
+// goat.greeting();
+// goat.move();
+// goat.setAnimalSize('Large');
+// console.log(goat.getAnimalSize);
 
 
 // 2. Inheritance
 // Inheritance allows one class to extend another.
 class Monkey extends Animal {
+    animalSize: string='big';
     public animalAge = 16;
     constructor(animalName: string) {
         super(animalName);
@@ -42,6 +45,9 @@ class Monkey extends Animal {
     }
     move() {
         console.log(`I can walk and I can jump`)
+    }
+    animalHeight(): string {
+        return '70cm';
     }
 }
 const monkey = new Monkey('Monkey');
