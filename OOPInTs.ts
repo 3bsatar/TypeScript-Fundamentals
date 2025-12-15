@@ -2,7 +2,9 @@
 // Classes & Object
 // A class is a blueprint for creating objects. An object is an instance of a class.
 class Animal {
-    animalName = '';
+
+    constructor(public animalName: string) {
+    }
 
     greeting() {
         console.log(`Hello there, I'm a ${this.animalName}`)
@@ -11,8 +13,8 @@ class Animal {
         console.log(`I can walk`)
     }
 }
-const goat = new Animal();
-goat.animalName='Goat';
+const goat = new Animal('Goat');
+// goat.animalName = 'Goat';
 goat.greeting();
 goat.move();
 
