@@ -34,7 +34,7 @@ abstract class Animal {
 
 // 2. Inheritance
 // Inheritance allows one class to extend another.
-class Monkey extends Animal implements animalDetails {
+export class Monkey extends Animal implements animalDetails {
     animalSize: string='big';
     animalColor: string='Brown';
     public animalAge = 16;
