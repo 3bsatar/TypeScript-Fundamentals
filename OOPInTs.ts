@@ -34,8 +34,9 @@ abstract class Animal {
 
 // 2. Inheritance
 // Inheritance allows one class to extend another.
-class Monkey extends Animal {
+class Monkey extends Animal implements animalDetails {
     animalSize: string='big';
+    animalColor: string='Brown';
     public animalAge = 16;
     constructor(animalName: string) {
         super(animalName);
@@ -49,6 +50,9 @@ class Monkey extends Animal {
     animalHeight(): string {
         return '70cm';
     }
+    animalWidth(): number {
+        return 50;
+    }
 }
 const monkey = new Monkey('Monkey');
 monkey.greeting();
@@ -61,3 +65,12 @@ console.log(monkey.animalAge);
 
 // 4. Polymorphism
 // Polymorphism lets you treat different classes through a common interface or base class.
+
+
+// 5. Abstraction
+
+// 6. Interfaces
+interface animalDetails{
+    animalColor:string;
+    animalWidth():number;
+}
